@@ -27,6 +27,32 @@ Special application for android devices [https://play.google.com/store/apps/deta
 - Maximum power of the controlled device 16 A
 - Dimensions: 70 mm x 50 mm and 82 mm x 64 mm (for DIN rail)
 
+### Required Parts:
+|  ID |  Designator |  Name | Quantity  |  Link |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+|1|U1|DS3231|1|http://got.by/5e99zr|
+|2|U5|HLK-PM01|1|http://got.by/5e99tc|
+|3|R7,R8,R6|10k|3||
+|4|R9|100|1||
+|5|R1|200|1||
+|6|R2,R3|4.7k|2||
+|7|R5|220|1||
+|8|Q2|IRL530NPBF|1|http://got.by/5e9afi|
+|9|RELAY1|HF115F/005-2ZS4|1|http://got.by/5e9aag|
+|10|H14|Header-Male-2.54_1x3|1|Header2.54mm 1x3P|
+|11|LED1|LED-TH-5mm_R|1|333-2SURD/S530-A3|
+|12|J3,J2|HDR-M-2.54_1x2|2||
+|13|C3|10uF|1|50YXF10MFFC5X11|
+|14|D2,D1|1N4148|2|http://got.by/5e9anv|
+|15|H7|Header-Male-2.54_1x2|1|826629-2|
+|16|U6|DG128-5.0-03P-14-00A(H)|1|http://got.by/5e9b13|
+|17|U2|Wemos D1 Mini|1|http://got.by/40d3u7|
+|18|B1|BS-2-1|1|BS-2-1|
+|19|C1|100nF|1||
+|20|U7,U3,U4|DG128-5.0-02P-14-00A(H)|3|http://got.by/5e9b13|
+|21|BME280|||http://ali.pub/40d52x|
+|22|DHT22|||http://got.by/5e9b6x|
+
 ## Flashing Firmware to ESP8266
 ### Tool Downloading
 The ESP8266 is a low-cost Wi-Fi microchip produced by Espressif Systems. Espressif Systems also developed a ESP Flash Download Tool to update the firmware of ESP8266.
