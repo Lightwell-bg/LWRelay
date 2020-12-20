@@ -1,5 +1,6 @@
 ##Device for controlling heating/cooling devices up to 3.5 kW. Based on ESP8266 for Home Automation (IoT).
-Built-in Wi-Fi allows you to control devices connected to the controller via any web browser or using an application for a mobile phone / tablet.
+
+**Built-in Wi-Fi allows you to control devices connected to the controller via any web browser or using an application for a mobile phone / tablet.
 Connecting the controller to the Internet will allow you to control the heater from anywhere outside the home via MQTT.
 Special application for android devices [https://play.google.com/store/apps/details?id=eu.ledlightwell.lwheater](https://play.google.com/store/apps/details?id=eu.ledlightwell.lwheater)
 **Features**
