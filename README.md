@@ -7,6 +7,7 @@ Special application for android devices [https://play.google.com/store/apps/deta
 **Features**
 - automatic turning on / of the device at night (reduced rates)
 - turning on / off the device according to a specified schedule (4 time intervals)
+- maintaining the set temperature (heating or cooling)
 - Always precise time because of synchronization with precise time clocks (DS3231) or NTP servers on the Internet
 - forced switching on / off the device with a button for a specified interval
 - forced remote on / off from anywhere in the world via the Internet
