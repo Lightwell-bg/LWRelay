@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta http-equiv = "Content-type" content = "text/html; charset=utf-8">
+        <title>Relay</title>
+        <link rel="icon" href="./img/favicon.png" type="images/png">
+        <link rel = "stylesheet" type = "text/css" href = "/style.css">
+        <script type = "text/javascript" src = "/function.js"></script>
+        <script type = "text/javascript" src = "/lang_RU.js"></script>
+		<script type = "text/javascript" src = "/lang_BG.js"></script>
+		<script type = "text/javascript" src = "/lang_EN.js"></script>
+        <script type = "text/javascript">
+            /*function set_light(submit) {
+				server = "/setlightlevel?lightlevel="+val('lightlevel') + "&lightgister=" + val('lightgister');
+                send_request(submit,server);
+				alert("Ok");
+            }*/		
+            function setwcount(submit) {
+                server = "/setwcount?totalWorkMinute=" + val('totalWorkMinute') + "&resourceMinute=" + val('resourceMinute') + "&writeEPPROM=" + val_sw("writeEPPROM");;
+                send_request(submit, server);
+				alert("Ok");
+            }
+			function set_save_on(submit) {
+                server = "/saveOn?writeEPPROM=" + val_sw("writeEPPROM");
+                send_request(submit, server);
+				alert("Ok");
+            }
+			function set_autoff(submit) {
+                server = "/setautoff?perDelayDirON=" + val('perDelayDirON') + "&auto_off=" + val_sw("auto_off");;
+                send_request(submit, server);
+				alert("Ok");
+            }
+        </script>
+    </head>
+    <body onload = "load();">
+        <header>
+            <span class="opt_cn" id="header"></span><br>
+            <span class="opt_cn" id="P_time_informer"></span>
+            <span id="time">{{time}}</span><BR>
+			<span id="status">{{lampison}}</span> 
+        </header>       
+        <central-unit>
+            <div class="menu_unit">
+                <a class="link__img" href="/index.html"><span class="ico__text">Home</span></a>			
+                <a class="link__img" href="/wifi.html"><span class="ico__text">Wifi</span></a>
+                <a class="link__img" href="/time.html"><span class="ico__text">Time</span></a>
+                <a class="link__img" href="/setup.html"><span class="ico__text">Setup</span></a>
+				<a class="link__img" href="/sensor.html"><span class="ico__text">Sensor</span></a>
+                <a class="link__img" href="/help.html"><span class="ico__text">Help</span></a>
+                <a class="link__img" href="#"><span class="ico__text" onclick="restart(this,'ResetESP?');">Restart</span></a>
+            </div>
+            <div id="main_unit">
+            <titles>
+                <span class="opt_cn" id="P_setup_title"></span>
+            </titles>
+                <center>
+					<hr>
+					<label class="switch">
+						<span class="opt_cn" id="P_setup_autoff"></span>
+						<input type="checkbox" class="checkbox" id="auto_off" name="switch-btn">
+						<span class="switch-btn"></span>
+					</label>
+					<hr>
+                    <table>
+                        <tr>
+                            <td align = "right"><span class="opt_cn" id="P_setup_peroff"></span></td>
+                            <td><select id = "perDelayDirON">
+                                <option value = "15"> 15 min </option>
+                                <option value = "30"> 30 min </option>
+                                <option value = "45"> 45 min </option>
+                                <option value = "60"> 1 hour </option>
+                                <option value = "120"> 2 hour </option>
+                                <option value = "180"> 3 hour </option>
+                                <option value = "240"> 4 hour </option>
+                            </select></td>
+                           
+                        </tr>
+                    </table>
+					<span class="save_booton" id="save" onclick="set_autoff(this);"></span>
+					<br><br>								
+                </center>
+				
+            <titles>
+                <span class="opt_cn" id="P_weather_title"></span>
+            </titles>
+            <!--div class="informer">
+                <span class="opt_cn" id="P_weather_informer"></span>
+            </div-->
+                <center>
+					<hr>
+					<label class="switch">
+						<span class="opt_cn" id="P_setup_writeEPPROM"></span>
+						<input type="checkbox" class="checkbox" id="writeEPPROM" name="switch-btn" onclick="set_save_on(this);">
+						<span class="switch-btn"></span>
+					</label>
+					<hr>
+                    <table>
+                        <tr>
+                            <td align = "right"><span class="opt_cn" id="P_weather_server"></span></td>
+                            <td><input type="text" class="field" id="resourceMinute" value="{{resourceMinute}}" class="form-control" pattern="[0-9]{1,10}"></td>
+                        </tr>
+                        <tr>
+                            <td align = "right"><span class="opt_cn" id="P_weather_key"></span></td>
+                            <td><input type="text" class="field" id="totalWorkMinute" value="{{totalWorkMinute}}" class="form-control" pattern="[0-9]{1,10}"></td>
+                        </tr>
+                    </table>
+                </center>
+		
+                <span class="save_booton" id="save1" onclick="setwcount(this);"></span>
+					
+				
+            </div>
+	
+            <div class="menu_unit" id="langs">
+                <a><span class="ico__text" onclick="set_lang_f(this, 'EN');">EN</span></a>			
+                <a><span class="ico__text" onclick="set_lang_f(this, 'RU');">RU</span></a>
+                <a><span class="ico__text" onclick="set_lang_f(this, 'BG');">BG</span></a>
+            </div>
+        </central-unit>
+    </body>
+</html>
